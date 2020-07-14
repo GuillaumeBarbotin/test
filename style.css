@@ -1,4 +1,226 @@
-body {    
-    padding: 0;
-    margin: 0;
+/* Police de caractère */
+@font-face {
+    font-family: 'aliceregular';
+    src: url('Alice-Regular-webfont.eot');
+    src: url('Alice-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Alice-Regular-webfont.woff2') format('woff2'),
+         url('Alice-Regular-webfont.woff') format('woff'),
+         url('Alice-Regular-webfont.ttf') format('truetype'),
+         url('Alice-Regular-webfont.svg#aliceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Propriétés de <body> */
+body {
+    font-family: 'aliceregular', Arial, sans-serif;
+}
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+main {
+    align-items: stretch;
+}
+p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+}
+/* Propriétés de <header> */
+figure {
+    flex-basis: 30%;
+    flex-shrink: 0;
+    background-color: #FBC02D;
+    text-align: center;
+}
+figure img {
+    border-radius: 50%;
+    border: solid 2px orange;
+    margin: 3rem 0 2rem;
+}
+.title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4rem;
+}  
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+h1 span {
+    color: #FBC02D;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.8rem;
+}
+h2 span {
+    border-bottom: solid 2px #FBC02D;
+}
+/* Propriétés de <.aside> */
+.aside {
+    flex-basis: 30%;
+    flex-shrink: 0;
+    background-color: #FBC02D;
+    display: flex;
+    flex-direction: column;
+}
+.aside section:nth-child(2) {
+    flex-grow: 1;
+}
+.aside h3 {
+    background-color: #474747;
+    font-size: 1.8rem;
+    color: #FBC02D;
+    text-align: center;
+    padding: .5rem 0;
+    margin-bottom: 2rem;
+}
+.contact {
+    margin: 0 2.5rem 3rem;
+}
+.contact p {
+    margin-bottom: 1rem;
+}
+.propos {
+    text-align: justify;
+    margin: 0 2.5rem;
+}
+.loisirs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+.loisirs img {
+    color: #474747;
+    border-radius: 50%;
+    border: solid 2px #474747;
+}
+/* Propriétés de <.content> */
+.content {
+    margin: 0 0 4rem 4rem;
+}
+.content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: .6rem;
+    border-bottom: solid 2px #FBC02D;
+    margin: 1rem 2rem 3rem 0;
+    display: flex;
+}
+.content h3 i {
+    color: #FBC02D;
+    margin-right: 2rem;
+}
+.article {
+    display: flex;
+    margin-bottom: 3rem;
+}
+article {
+    flex-grow: 1;
+}
+aside {
+    flex-basis: 30%;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    display: flex;
+}
+aside i {
+    color: #FBC02D;
+    margin-right: 1rem;
+}
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+h5 {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+.reco {
+    display: flex;
+}
+/* RESPONSIVE DESIGN */
+/* RD extra-small => portables format portrait */
+@media (max-width: 575.98px) {
+    .container {
+        width: 90%;
+    }
+}
+/* RD small => portables format paysage */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        width: 540px;
+    }
+}
+/* RD medium => tablettes */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        width: 720px;        
+    }
+}
+/* RD large => écrans PC < 12 pouces */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        width: 960px;
+    }
+}
+/* RD extra-large => écrans PC > 12 pouces et TV */
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+/* RD global-1 => écrans < 992 pixels */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    .aside {
+        order: 2;
+    }
+    .title {
+        justify-content: center;
+        margin: 3rem auto;
+    }
+    .contact {
+        text-align: center;
+    }
+    .content {
+        margin-left: 1rem;
+    }
+    .aside h3 {
+        margin-bottom: 1rem;
+    }
+    .aside div {
+        margin: 1rem;
+    }
+    .content h3 {
+        margin-bottom: 1rem;
+    }
+    .article {
+        margin-bottom: 1rem;
+    }
+    .loisirs i {
+        margin-bottom: 1rem;
+    }
+}
+/* RD global-2 => écrans < 576 pixels */
+@media (max-width: 576px) {
+    .title {        
+        margin: 2rem auto;
+    }
+    .content {
+        margin-left: .5rem;
+    }
+    .article {
+        flex-direction: column;
+    }
+    aside {
+        margin-bottom: 1rem;
+    }
+    .reco {
+        margin-bottom: 1rem;
+    }
 }
