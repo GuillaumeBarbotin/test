@@ -34,7 +34,7 @@ figure {
 }
 figure img {
     border-radius: 50%;
-    border: solid 2px orange;
+    border: solid 2px rgb(218, 175, 18);
     margin: 3rem 0 2rem;
 }
 .title {
@@ -106,7 +106,7 @@ h2 span {
     font-weight: bold;
     padding-bottom: .6rem;
     border-bottom: solid 2px #FBC02D;
-    margin: 1rem 2rem 3rem 0;
+    margin: 1rem 0 3rem 0;
     display: flex;
 }
 .content h3 i {
@@ -157,13 +157,17 @@ h5 {
 /* RD medium => tablettes */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .container {
-        width: 720px;        
+        width: 720px;
+        flex-direction: column;
     }
 }
 /* RD large => écrans PC < 12 pouces */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .container {
         width: 960px;
+    }
+    h3 {
+        font-size: 1.8rem;
     }
 }
 /* RD extra-large => écrans PC > 12 pouces et TV */
